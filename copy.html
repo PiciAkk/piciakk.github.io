@@ -5,5 +5,7 @@ for (const param of params) {
   textToCopy = param[1];
 }
 navigator.clipboard.writeText(textToCopy);
-window.close()
+setTimeout(function(){
+  window.close()
+}, 1000);
 </script>
