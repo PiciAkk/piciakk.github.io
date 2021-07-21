@@ -1,0 +1,11 @@
+<script>
+var params = new URLSearchParams(window.location.search);
+console.log(params)
+for (const param of params) {
+  textToCopy = param[1];
+}
+navigator.clipboard.writeText(textToCopy);
+document.addEventListener("DOMContentLoaded", function() {
+  window.close()
+});
+</script>
