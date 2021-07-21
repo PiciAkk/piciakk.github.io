@@ -1,11 +1,12 @@
 <script>
+function pause(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 var params = new URLSearchParams(window.location.search);
-console.log(params)
 for (const param of params) {
   textToCopy = param[1];
 }
 navigator.clipboard.writeText(textToCopy);
-setTimeout(function(){
-  window.close()
-}, 1000);
+pause(1000)
+window.close()
 </script>
